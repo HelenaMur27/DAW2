@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+
+
+<table BORDER="1">
+<tr>
+<th><p>Concepte</p></th>
+<th><p>Codi Font</p></th>
+<th><p>Resultat</p></th>
+</tr>
+
+<tr>
+<td><p>Data Types/JavaScript Objects</p></td>
+<td><p>
+<pre>
+var persona = {
+	Nombre : "Helena",
+	Apellido  : "Mur",
+	Edat       : 19,
+	Frase: "esta practicando JavaScript"
+};
+
+document.getElementById("Edats").innerHTML =
+persona.Nombre + " " + persona.Apellido + " tiene " + persona.Edat 
++ " " +"anyos" + " "+ "y" +" "+ persona.Frase;</pre>
+</p></td>
+<td><p>
+<p id="Edats"></p>
+<br/><br/>
+</td>
+<td>
+<td><p>JavaScript Operators</p></td>
+<td><p>
+<pre>
+function Funcion() {
+	var texto1 = "La Helena tiene";
+	var texto2 = "el pelo rubio";
+	document.getElementById("demo").innerHTML = texto1 + " " + texto2; 
+}</pre>
+</p></td>
+
+<td><p>
+<p id="demo"></p>
+<button onclick="Funcion()">Prueba</button>
+</p></td>
+</tr>
+
+
+<tr>
+<td><p>JavaScript Comparisons</p></td>
+<td><p>
+<pre>
+function Funcion2() {
+	var valor,resultado;
+	valor = document.getElementById("edat").value;
+
+	if(valor==undefined){
+		resultado=  "No has introducido ninguna edad";
+	}else if(valor>0 && valor<18){
+		resultado="Eres menor de edad";
+	}else {
+		resultado= "Eres mayor de edad";
+	}
+	document.getElementById("demo2").innerHTML = resultado + "";
+}
+</pre>
+</p></td>
+
+<td><p>
+
+<p id="demo2"></p>
+<input id="edat"/>
+<button onclick="Funcion2()">Prueba</button>
+</p></td>
+</tr>
+
+
+
+<tr>
+<td><p>JavaScript Conditions</p></td>
+<td><p>
+<pre>
+function Funcion3() {
+    var horas;
+    var time = new Date().getHours();
+    
+	if (time < 10){
+        horas = "Bon dia pel mati";
+    }else if (time < 21){
+        horas = "Bon dia";
+    }else {
+        horas ="Bona nit";
+    }
+	
+	document.getElementById("demo3").innerHTML = horas;
+}
+</pre>
+</p></td>
+
+<td><p>
+
+<p id="demo3"></p>
+<button onclick="Funcion3()">Prueba</button>
+</p></td>
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+<td><p>JavaScript Switch</p></td>
+<td><p>
+<pre>
+function Funcion4() {
+    var mes;
+    switch (new Date().getMonth()){
+        case 0:
+            mes = "Enero";
+            break;
+        case 1:
+            mes = "Febrero";
+            break;
+        case 2:
+            mes = "Marzo";
+            break;
+        case 3:
+            mes = "Abril";
+            break;
+        case 4:
+            mes = "Mayo";
+            break;
+        case 5:
+            mes = "Junio";
+            break;
+        case  6:
+            mes = "Julio";
+            break;	
+		case  7:
+            mes = "Agosto";
+            break;	
+	    case  8:
+            mes = "Setiembre";
+            break;	
+		case  9:
+            mes = "Octubre";
+            break;
+		case  10:
+            mes = "Noviembre";
+            break;
+		case  11:
+            mes = "Diciembre";
+            break;
+    }
+    document.getElementById("demo4").innerHTML = "El mes actual es " + mes;
+}
+</pre>
+</p></td>
+
+<td><p>
+<p>Clica para ver el mes actual: </p>
+<button onclick="Funcion4()">Prueba</button>
+<p id="demo4"></p>
+</p></td>
+</tr>
+
+<tr>
+<td><p>JavaScript Objects</p></td>
+<td><p>
+<pre>
+function Funcion5(){
+    var fecha;
+	var data=new Date();
+	fecha=data.getDate()+"/"+(data.getMonth()+1)+"/"+data.getFullYear()+"___"+(data.getHours()+1)+":"+(data.getMinutes()+1)+":"+(data.getSeconds()+1);
+	
+	
+
+	document.getElementById("demo5").innerHTML = "El dia, mes, any i hora actuals son " + fecha;
+}
+</pre>
+</p></td>
+<td><p>
+<p>Clica para ver el dia,mes,anyo i hora actuales: </p>
+<button onclick="Funcion5()">Prueba</button>
+<p id="demo5"></p>
+</p></td>
+</tr>
+
+</table>
+
+<script>
+
+var persona = {
+    Nombre : "Helena",
+    Apellido  : "Mur",
+    Edat       : 19,
+    Frase: "esta practicando JavaScript"
+};
+
+document.getElementById("Edats").innerHTML =
+persona.Nombre + " " + persona.Apellido + " tiene " + persona.Edat + " " +"anyos" + " "+ "y" +" "+ persona.Frase;
+
+
+
+function Funcion() {
+    var texto1 = "Helena tiene";
+    var texto2 = "el pelo rubio";
+    document.getElementById("demo").innerHTML = texto1 + " " + texto2;
+}
+
+
+function Funcion2(){
+	var valor,resultado;
+	valor = document.getElementById("edat").value;
+
+	if(!valor){
+		resultado=  "No has introducido ninguna edad";
+	}else if(valor>0 && valor<18){
+		resultado="Eres menor de edad";
+	}else {
+		resultado= "Eres mayor de edad";
+	}
+	
+	document.getElementById("demo2").innerHTML = resultado + "";
+}
+
+function Funcion3() {
+    var horas;
+    var time = new Date().getHours();
+    
+	if (time < 10){
+        horas = "Bon dia pel mati";
+    }else if (time < 21){
+        horas = "Bon dia";
+    }else {
+        horas ="Bona nit";
+    }
+	
+	document.getElementById("demo3").innerHTML = horas;
+}
+
+function Funcion4() {
+    var mes;
+    switch (new Date().getMonth()){
+        case 0:
+            mes = "Enero";
+            break;
+        case 1:
+            mes = "Febrero";
+            break;
+        case 2:
+            mes = "Marzo";
+            break;
+        case 3:
+            mes = "Abril";
+            break;
+        case 4:
+            mes = "Mayo";
+            break;
+        case 5:
+            mes = "Junio";
+            break;
+        case  6:
+            mes = "Julio";
+            break;	
+		case  7:
+            mes = "Agosto";
+            break;	
+	    case  8:
+            mes = "Setiembre";
+            break;	
+		case  9:
+            mes = "Octubre";
+            break;
+		case  10:
+            mes = "Noviembre";
+            break;
+		case  11:
+            mes = "Diciembre";
+            break;
+    }
+    document.getElementById("demo4").innerHTML = "El mes actual es " + mes;
+}
+
+function Funcion5(){
+    var fecha;
+	var data=new Date();
+	fecha=data.getDate()+"/"+(data.getMonth()+1)+"/"+data.getFullYear()+"___"+(data.getHours()+1)+":"+(data.getMinutes()+1)+":"+(data.getSeconds()+1);
+	
+	
+
+	document.getElementById("demo5").innerHTML = "El dia, mes, any i hora actuals son " + fecha;
+}
+	
+</script>
+
+
+
+</body>
+</html>
