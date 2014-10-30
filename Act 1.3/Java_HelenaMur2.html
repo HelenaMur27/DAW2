@@ -183,11 +183,14 @@ function Funcion4() {
 function Funcion5(){
     var fecha;
 	var data=new Date();
-	fecha=data.getDate()+"/"+(data.getMonth()+1)+"/"+data.getFullYear()+"___"+(data.getHours()+1)+":"+(data.getMinutes()+1)+":"+(data.getSeconds()+1);
+	fecha=data.getDate()+"/"+(data.getMonth()+1)+"/"+data.getFullYear()+
+	"___"+(data.getHours()+1)+":"+(data.getMinutes()+1)+":"+
+	(data.getSeconds()+1);
 	
 	
 
-	document.getElementById("demo5").innerHTML = "El dia, mes, any i hora actuals son " + fecha;
+	document.getElementById("demo5").innerHTML = "El dia, mes, any i 
+	hora actuals son " + fecha;
 }
 </pre>
 </p></td>
